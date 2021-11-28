@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(235, 21%, 11%);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.bg {
+  width: 100%;
+  height: 275px;
+  background-image: url(images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+}
+
+.container {
+  max-width: 375px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: hsl(236, 33%, 92%);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* =============== FORM =============== */
+
+.form {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 0.4rem;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  padding: 1rem 1.3rem;
+  background-color: hsl(235, 24%, 19%);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid hsl(237, 14%, 26%);
+  border-radius: 50%;
+}
+
+.form input[type='text'] {
+  width: 100%;
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  outline: none;
+
+  color: hsl(236, 33%, 92%);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+}
+
+.form input[type='submit'] {
+  position: absolute;
+  top: 0;
+  z-index: -100;
+  opacity: 0;
+}
+
+/* =============== LIST =============== */
+
+.todo-list {
+  width: 100%;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.todo-item {
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+  color: hsl(236, 33%, 92%);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.todo-item .circle {
+  position: relative;
+  cursor: pointer;
+}
+.todo-item .circle:hover {
+  border-color: skyblue;
+}
+
+li.checked {
+  color: hsl(237, 14%, 26%);
+  text-decoration-line: line-through;
+}
+
+li.checked .circle {
+  background-image: url(images/icon-check.svg),
+    linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+li .delete-item {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.list-footer {
+  justify-content: space-between;
+  color: hsl(233, 14%, 35%);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.list-footer a {
+  color: hsl(233, 14%, 35%);
+}
+.list-footer a:hover {
+  color: hsl(236, 33%, 92%);
+}
+
+.filter-options {
+  justify-content: center;
+  border-radius: 0.4rem;
+}
+
+.filter-options li {
+  position: relative;
+  list-style: none;
+}
+
+.filter-options label {
+  color: hsl(233, 14%, 35%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+.filter-options label:hover {
+  color: hsl(236, 33%, 92%);
+}
+
+input[type='radio'] {
+  position: absolute;
+  z-index: -100;
+}
+
+input[type='radio']:checked + label,
+input[type='radio']:checked + label:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+/* =============== Drag & Drop =============== */
+
+small.instruction {
+  display: block;
+  margin-top: 2.5rem;
+  color: hsl(233, 14%, 35%);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* =============== Attribuition =============== */
+
+.attribution {
+  margin-top: 5rem;
+  color: hsl(0, 0%, 55%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 100%, 69%);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Todo app</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="bg"></div>
+  <main>
+    <div class="container">
+      <div class="header">
+        <h1>Todo</h1>
+        <img src="images/icon-sun.svg" alt="dark-light theme toggle" id="themeToggle">
+      </div>
+
+      <div class="card">
+        <div>
+          <form class="form" id="form">
+            <div class="input-field card-container">
+              <div class="circle"></div>
+              <input type="text" name="todo" class="input" id="input" placeholder="Create a new todo...">
+            </div>
+            <input type="submit" class="submit">
+          </form>
+        </div>
+
+        <div class="todo-list">
+          <ul class="collection"></ul>
+
+          <div class="list-footer card-container">
+            <span class="items-left">
+              <!-- Add dynamic number --> items left
+            </span>
+            <a href="#" class="clear-completed">Clear Completed</a>
+          </div>
+        </div>
+
+        <ul class="filter-options card-container">
+          <li>
+            <input type="radio" name="filter" id="filterAll">
+            <label for="filterAll" class="group">All</label>
+          </li>
+
+          <li>
+            <input type="radio" name="filter" id="filterActive">
+            <label for="filterActive" class="group">Active</label>
+          </li>
+
+          <li>
+            <input type="radio" name="filter" id="filterCompleted">
+            <label for="filterCompleted" class="group">Completed</label>
+          </li>
+        </ul>
+      </div>
+
+      <small class="instruction">Drag and drop to reorder list</small>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
